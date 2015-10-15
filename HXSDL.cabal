@@ -14,11 +14,62 @@ category:            Graphics
 build-type:          Simple
 -- extra-source-files:  
 cabal-version:       >=1.10
+data-files:          *.bmp
+data-dir:            src
+Flag ios
+      Description:         Build for iOS
+      Default:             False
 
+Flag android
+      Description:         Build for Android
+      Default:             False
+
+Flag desktop
+      Description:         Build for Desktop
+      Default:             True
+               
+                   
+-- Desktop executable 
 executable HXSDL
   main-is:             Main.hs
   -- other-modules:       
   -- other-extensions:    
-  build-depends:       base >=4.8 && <4.9
+  build-depends:       base >=4.7 && < 5
+                     , linear >= 1.10.1.2 && < 1.21
+                     , sdl2 == 2.1.0
   hs-source-dirs:      src
   default-language:    Haskell2010
+  ghc-options:         -Wall
+  if flag(desktop)
+     Buildable: True
+  else
+     Buildable: False
+
+-- Android executable
+executable libHXSDL.so
+  main-is:             AndroidMain.hs
+  build-depends:       base >=4.7 && < 5
+                     , linear >= 1.10.1.2 && < 1.21
+                     , sdl2 == 2.1.0
+  ghc-options:         -optl-shared -threaded
+  c-sources:           src/init.c
+  include-dirs: :      src
+  cc-options:          -shared
+  ld-options:          -shared
+  if flag (ios) || flag(desktop)
+     Buildable: False
+                  
+-- iOS executable
+executable HXSDLStaticLib
+  build-depends:       base >=4.7 && < 5
+                     , linear >= 1.10.1.2 && < 1.21
+                     , sdl2 == 2.1.0
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -staticlib -threaded -no-hs-main -pgmlibtool libtool -stubdir .
+  cpp-options:         -DIOS
+  main-is:             iOSMain.hs
+  if flag(ios)
+     Buildable:           True
+  else
+     Buildable:           False
