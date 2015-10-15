@@ -1,0 +1,7 @@
+[submodule "submodules/docker"]
+	path = submodules/docker
+	url = https://github.com/EDeijl/basic-hs-android-docker.git
+	branch = SDL
+[submodule "submodules/ghc-ios-scripts"]
+	path = submodules/ghc-ios-scripts
+	url = https://github.com/ghc-ios/ghc-ios-scripts.git
