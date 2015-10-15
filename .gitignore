@@ -1,4 +1,5 @@
-l-dev
+dist
+cabal-dev
 *.o
 *.hi
 *.chi
