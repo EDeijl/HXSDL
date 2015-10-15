@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A93EC551BCFF56C0001DA44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93EC541BCFF56C0001DA44 /* main.m */; };
+		7A93EC581BCFF56C0001DA44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93EC571BCFF56C0001DA44 /* AppDelegate.m */; };
+		7A93EC5A1BCFF56C0001DA44 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 7A93EC591BCFF56C0001DA44 /* Shader.fsh */; };
+		7A93EC5C1BCFF56C0001DA44 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 7A93EC5B1BCFF56C0001DA44 /* Shader.vsh */; };
+		7A93EC5F1BCFF56C0001DA44 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A93EC5E1BCFF56C0001DA44 /* GameViewController.m */; };
+		7A93EC621BCFF56C0001DA44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A93EC601BCFF56C0001DA44 /* Main.storyboard */; };
+		7A93EC641BCFF56C0001DA44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A93EC631BCFF56C0001DA44 /* Assets.xcassets */; };
+		7A93EC671BCFF56C0001DA44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A93EC651BCFF56C0001DA44 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A93EC501BCFF56C0001DA44 /* HXSDL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXSDL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A93EC541BCFF56C0001DA44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A93EC561BCFF56C0001DA44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7A93EC571BCFF56C0001DA44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7A93EC591BCFF56C0001DA44 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		7A93EC5B1BCFF56C0001DA44 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		7A93EC5D1BCFF56C0001DA44 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		7A93EC5E1BCFF56C0001DA44 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		7A93EC611BCFF56C0001DA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A93EC631BCFF56C0001DA44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A93EC661BCFF56C0001DA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A93EC681BCFF56C0001DA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A93EC4D1BCFF56C0001DA44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A93EC471BCFF56C0001DA44 = {
+			isa = PBXGroup;
+			children = (
+				7A93EC521BCFF56C0001DA44 /* HXSDL */,
+				7A93EC511BCFF56C0001DA44 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7A93EC511BCFF56C0001DA44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A93EC501BCFF56C0001DA44 /* HXSDL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A93EC521BCFF56C0001DA44 /* HXSDL */ = {
+			isa = PBXGroup;
+			children = (
+				7A93EC561BCFF56C0001DA44 /* AppDelegate.h */,
+				7A93EC571BCFF56C0001DA44 /* AppDelegate.m */,
+				7A93EC591BCFF56C0001DA44 /* Shader.fsh */,
+				7A93EC5B1BCFF56C0001DA44 /* Shader.vsh */,
+				7A93EC5D1BCFF56C0001DA44 /* GameViewController.h */,
+				7A93EC5E1BCFF56C0001DA44 /* GameViewController.m */,
+				7A93EC601BCFF56C0001DA44 /* Main.storyboard */,
+				7A93EC631BCFF56C0001DA44 /* Assets.xcassets */,
+				7A93EC651BCFF56C0001DA44 /* LaunchScreen.storyboard */,
+				7A93EC681BCFF56C0001DA44 /* Info.plist */,
+				7A93EC531BCFF56C0001DA44 /* Supporting Files */,
+			);
+			path = HXSDL;
+			sourceTree = "<group>";
+		};
+		7A93EC531BCFF56C0001DA44 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A93EC541BCFF56C0001DA44 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A93EC4F1BCFF56C0001DA44 /* HXSDL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A93EC6B1BCFF56C0001DA44 /* Build configuration list for PBXNativeTarget "HXSDL" */;
+			buildPhases = (
+				7A93EC4C1BCFF56C0001DA44 /* Sources */,
+				7A93EC4D1BCFF56C0001DA44 /* Frameworks */,
+				7A93EC4E1BCFF56C0001DA44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HXSDL;
+			productName = HXSDL;
+			productReference = 7A93EC501BCFF56C0001DA44 /* HXSDL.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A93EC481BCFF56C0001DA44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Erik Deijl";
+				TargetAttributes = {
+					7A93EC4F1BCFF56C0001DA44 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 7A93EC4B1BCFF56C0001DA44 /* Build configuration list for PBXProject "HXSDL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A93EC471BCFF56C0001DA44;
+			productRefGroup = 7A93EC511BCFF56C0001DA44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A93EC4F1BCFF56C0001DA44 /* HXSDL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A93EC4E1BCFF56C0001DA44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A93EC621BCFF56C0001DA44 /* Main.storyboard in Resources */,
+				7A93EC5C1BCFF56C0001DA44 /* Shader.vsh in Resources */,
+				7A93EC641BCFF56C0001DA44 /* Assets.xcassets in Resources */,
+				7A93EC671BCFF56C0001DA44 /* LaunchScreen.storyboard in Resources */,
+				7A93EC5A1BCFF56C0001DA44 /* Shader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A93EC4C1BCFF56C0001DA44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A93EC581BCFF56C0001DA44 /* AppDelegate.m in Sources */,
+				7A93EC5F1BCFF56C0001DA44 /* GameViewController.m in Sources */,
+				7A93EC551BCFF56C0001DA44 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A93EC601BCFF56C0001DA44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A93EC611BCFF56C0001DA44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A93EC651BCFF56C0001DA44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A93EC661BCFF56C0001DA44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A93EC691BCFF56C0001DA44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A93EC6A1BCFF56C0001DA44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A93EC6C1BCFF56C0001DA44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HXSDL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.deijldevelopment.HXSDL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7A93EC6D1BCFF56C0001DA44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HXSDL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.deijldevelopment.HXSDL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A93EC4B1BCFF56C0001DA44 /* Build configuration list for PBXProject "HXSDL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A93EC691BCFF56C0001DA44 /* Debug */,
+				7A93EC6A1BCFF56C0001DA44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A93EC6B1BCFF56C0001DA44 /* Build configuration list for PBXNativeTarget "HXSDL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A93EC6C1BCFF56C0001DA44 /* Debug */,
+				7A93EC6D1BCFF56C0001DA44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A93EC481BCFF56C0001DA44 /* Project object */;
+}
