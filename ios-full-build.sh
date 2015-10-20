@@ -11,9 +11,6 @@ fi
 
 for arch in i386 arm; do
     env IOS_SCRIPTS=$IOS_SCRIPTS XCODE_PROJECT_BUILD_DIR=$XCODE_PROJECT_BUILD_DIR ./ios-$arch-build.sh $@
-#cabal-ios install && \
-    #cabal-ios configure -fios $@ && \
-    #cabal-ios build exe:CPConsoleAppStaticLib
     [ $? -eq 0 ] || exit 1
 done
 
@@ -23,7 +20,7 @@ echo
 
 lipo dist/arm/build/HXSDLStaticLib/HXSDLStaticLib.a dist/i386/build/HXSDLStaticLib/HXSDLStaticLib.a -create -output HXSDLStaticLib.a
 
-echo
+Echo
 echo Copying libraries
 echo
 

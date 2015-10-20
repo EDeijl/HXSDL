@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # iOS Configuration
 if [[ $(uname) == 'Darwin' ]] ; then

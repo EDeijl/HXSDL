@@ -23,5 +23,5 @@ echo
 if [ ! -d "$XCODE_PROJECT_BUILD_DIR/lib/$ARCH" ]; then
     mkdir -p $XCODE_PROJECT_BUILD_DIR/lib/$ARCH
 fi
-cp dist/$ARCH/build/HXSDLStaticLib/CPConsoleAppStaticLib.a \
+cp dist/$ARCH/build/HXSDLStaticLib/HXSDLStaticLib.a \
    "$XCODE_PROJECT_BUILD_DIR/lib/$ARCH/libHXSDL.a"

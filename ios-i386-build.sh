@@ -2,7 +2,7 @@
 #
 # This script build for i386 iOS and then copies the
 # static library to XCode
-
+source settings.env
 ARCH_OS=i386-apple-darwin11
 ARCH=i386
 if [ "$IOS_SCRIPTS" = "" -o "$XCODE_PROJECT_BUILD_DIR" = "" ]; then
@@ -21,5 +21,5 @@ if [ ! -d "$XCODE_PROJECT_BUILD_DIR/lib/$ARCH" ]; then
     mkdir -p $XCODE_PROJECT_BUILD_DIR/lib/$ARCH
 fi
 
-cp dist/$ARCH/build/HXSDLStaticLib/CPConsoleAppStaticLib.a \
+cp dist/$ARCH/build/HXSDLStaticLib/HXSDLStaticLib.a \
    "$XCODE_PROJECT_BUILD_DIR/lib/$ARCH/libHXSDL.a"
