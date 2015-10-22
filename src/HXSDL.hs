@@ -1,32 +1,21 @@
 {-# LANGUAGE OverloadedStrings #-}
-module HXSDL (startSDL) where
+module HXSDL (appLoop) where
 
-import Control.Concurrent (threadDelay)
-import Foreign.C.Types
-import Linear
-import qualified SDL
+import Control.Monad (unless)
+import Linear (V4 (..))
+import SDL
 
-import Paths_HXSDL (getDataFileName)
-
-screenWidth, screenHeight :: CInt
-(screenWidth, screenHeight) = (640, 480)
-
-startSDL :: IO ()
-startSDL = do
-  SDL.initialize [SDL.InitVideo]
-  window <- SDL.createWindow "SDL Tutorial" SDL.defaultWindow { SDL.windowInitialSize = V2 screenWidth screenHeight }
-  SDL.showWindow window
-  screenSurface <- SDL.getWindowSurface window
-
-  helloWorld <- getDataFileName "hello_world.bmp" >>= SDL.loadBMP
-
-  SDL.surfaceBlit helloWorld Nothing screenSurface Nothing
-  SDL.updateWindowSurface window
-
-  threadDelay 2000000
-
-  SDL.destroyWindow window
-  SDL.freeSurface helloWorld
-  SDL.quit
-
-
+appLoop :: Renderer -> IO ()
+appLoop renderer = do
+  events <- pollEvents
+  let eventIsQPress event =
+        case eventPayload event of
+          KeyboardEvent keyboardEvent ->
+            keyboardEventKeyMotion keyboardEvent == Pressed &&
+            keysymKeycode (keyboardEventKeysym keyboardEvent) == KeycodeQ
+          _ -> False
+      qPressed = not (null (filter eventIsQPress events))
+  rendererDrawColor renderer $= V4 0 0 255 255
+  clear renderer
+  present renderer
+  unless qPressed (appLoop renderer)
