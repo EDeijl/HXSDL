@@ -10,7 +10,7 @@ For all platforms:
  
 For iOS:
 - Machine with OSX installed (tested on El Capitan)
-- Xcode (tested with 7.0.1)
+- Xcode (tested with 7.1.0)
 
 ## Installation
 
@@ -23,7 +23,8 @@ Then run the following commands:
     ./setup.sh
 
 ## Building
-### General
+### Desktop
+Just do a `cabal install` and run it with `./dist/build/HXSDL/HXSDL`.
 
 ### iOS
 For SDL to work the SDL iOS libraries need to be compiled.
@@ -69,3 +70,6 @@ In the project folder run `arm-apple-darwin10-cabal configure -fios && arm-apple
 This will generate a static library in `dist/arm/build/HXSDLStaticLib`.
 Copy this library into `platforms/ios/HXSDL/SDL/lib`.
 You should now be able to run the project on a device from Xcode.
+
+### Android
+*coming soon...*
