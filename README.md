@@ -43,6 +43,7 @@ In this directory execute the following command:
 
 This will download the source of the dependencies that need manual compilation.
 Some of the libraries in that command are dependent on others, so we need to compile the libraries in the correct order. the order is as follows:
+
 1. bytes
 2. reflection
 3. distributive
