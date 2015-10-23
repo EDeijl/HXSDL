@@ -11,7 +11,7 @@ VALID_ARCHS = armv7 armv7s i386
 //This may be necessary if XCode complains
 //ARCHS = "$(ARCHS_STANDARD_32_BIT)"
 
-// Avoids stripping out critical GHC runtime code (Simon Marlow has mentioned there may be around needing this)
+// Avoids stripping out critical GHC runtime code (Simon Marlow has mentioned there may be around needing this
 DEAD_CODE_STRIPPING = NO
 
 ENABLE_BITCODE = NO
