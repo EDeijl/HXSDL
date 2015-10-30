@@ -15,7 +15,7 @@ appLoop renderer = do
             keysymKeycode (keyboardEventKeysym keyboardEvent) == KeycodeQ
           _ -> False
       qPressed = not (null (filter eventIsQPress events))
-  rendererDrawColor renderer $= V4 0 0 255 255
+  rendererDrawColor renderer $= V4 255 105 180 255
   clear renderer
   present renderer
   unless qPressed (appLoop renderer)

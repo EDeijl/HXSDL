@@ -24,7 +24,7 @@ Then run the following commands:
 
 ## Building
 ### Desktop
-Just do a `cabal install` and run it with `./dist/build/HXSDL/HXSDL`.
+Just do a `cabal configure -fdesktop && cabal install` and run it with `./dist/build/HXSDL/HXSDL`.
 
 ### iOS
 For SDL to work the SDL iOS libraries need to be compiled.

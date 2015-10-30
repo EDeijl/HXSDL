@@ -1,0 +1,14 @@
+-- Android executable
+executable libHXSDL.so
+  main-is:             AndroidMain.hs
+  build-depends:       base >=4.7 && < 5
+                     , linear >= 1.10.1.2 && < 1.21
+                     , sdl2 
+  ghc-options:         -shared -threaded
+  c-sources:           src/init.c
+  include-dirs: :      src
+  cc-options:          -shared
+  ld-options:          -shared
+  if flag (ios) || flag(desktop)
+     Buildable: False
+

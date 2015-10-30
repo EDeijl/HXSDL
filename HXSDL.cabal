@@ -27,6 +27,10 @@ Flag android
 Flag desktop
       Description:         Build for Desktop
       Default:             True
+
+Flag firstBuild
+      Description:         Fix for the Android build
+      Default:             False
                
                    
 -- Desktop executable 
@@ -45,20 +49,25 @@ executable HXSDL
   else
      Buildable: False
 
+
 -- Android executable
 executable libHXSDL.so
   main-is:             AndroidMain.hs
   build-depends:       base >=4.7 && < 5
                      , linear >= 1.10.1.2 && < 1.21
                      , sdl2 
-  ghc-options:         -optl-shared -threaded
+  if flag (firstBuild)
+    ghc-options:         -shared -threaded
+  else
+    ghc-options:         -optl-shared -threaded
+    cc-options:          -shared
+    ld-options:          -shared
   c-sources:           src/init.c
   include-dirs: :      src
-  cc-options:          -shared
-  ld-options:          -shared
   if flag (ios) || flag(desktop)
      Buildable: False
-                  
+
+
 -- iOS executable
 executable HXSDLStaticLib
   build-depends:       base >=4.7 && < 5
