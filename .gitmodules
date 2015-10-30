@@ -4,4 +4,4 @@
 	branch = SDL
 [submodule "submodules/ghc-ios-scripts"]
 	path = submodules/ghc-ios-scripts
-	url = https://github.com/ghc-ios/ghc-ios-scripts.git
+	url = https://github.com/EDeijl/ghc-ios-scripts.git
