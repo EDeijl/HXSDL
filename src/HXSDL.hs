@@ -1,21 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
-module HXSDL (appLoop) where
+module HXSDL (mainLoop) where
+import Graphics.UI.SDL
 
-import Control.Monad (unless)
-import Linear (V4 (..))
-import SDL
-
-appLoop :: Renderer -> IO ()
-appLoop renderer = do
-  events <- pollEvents
-  let eventIsQPress event =
-        case eventPayload event of
-          KeyboardEvent keyboardEvent ->
-            keyboardEventKeyMotion keyboardEvent == Pressed &&
-            keysymKeycode (keyboardEventKeysym keyboardEvent) == KeycodeQ
-          _ -> False
-      qPressed = not (null (filter eventIsQPress events))
-  rendererDrawColor renderer $= V4 255 105 180 255
-  clear renderer
-  present renderer
-  unless qPressed (appLoop renderer)
+mainLoop renderer = do
+         bmp <- loadBMP "hello_world.bmp"
+         tex <- createTextureFromSurface renderer bmp
+         renderClear renderer
+         renderCopy renderer tex Nothing Nothing
+         renderPresent renderer
+         threadDelay (10^6 * 2)
+         return ()
