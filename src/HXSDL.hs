@@ -1,12 +1,14 @@
 {-# LANGUAGE OverloadedStrings #-}
 module HXSDL (mainLoop) where
 import Graphics.UI.SDL
-
+import Control.Concurrent
+mainLoop :: Renderer -> IO ()
 mainLoop renderer = do
-         bmp <- loadBMP "hello_world.bmp"
-         tex <- createTextureFromSurface renderer bmp
+         putStrLn "mainloop"
          renderClear renderer
-         renderCopy renderer tex Nothing Nothing
+         putStrLn "clear renderer"
+         setRenderDrawColor renderer maxBound maxBound maxBound maxBound
+         putStrLn "set color"
          renderPresent renderer
          threadDelay (10^6 * 2)
          return ()
